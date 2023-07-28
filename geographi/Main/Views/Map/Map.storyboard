@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MapVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MapVC" customModule="geographi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgl-pu-g9r">
+                                <rect key="frame" x="20" y="59" width="353" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVI-6U-7oz">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="759"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rVI-6U-7oz" secondAttribute="bottom" id="4BB-og-C32"/>
+                                    <constraint firstAttribute="trailing" secondItem="rVI-6U-7oz" secondAttribute="trailing" id="8RM-qB-FMe"/>
+                                    <constraint firstItem="rVI-6U-7oz" firstAttribute="top" secondItem="sgl-pu-g9r" secondAttribute="top" id="We5-LP-cH1"/>
+                                    <constraint firstItem="rVI-6U-7oz" firstAttribute="centerY" secondItem="sgl-pu-g9r" secondAttribute="centerY" id="ZX8-pl-pgO"/>
+                                    <constraint firstItem="rVI-6U-7oz" firstAttribute="leading" secondItem="sgl-pu-g9r" secondAttribute="leading" id="mwd-u0-OJb"/>
+                                    <constraint firstItem="rVI-6U-7oz" firstAttribute="centerX" secondItem="sgl-pu-g9r" secondAttribute="centerX" id="zdf-or-AuB"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="App Background"/>
+                        <constraints>
+                            <constraint firstItem="sgl-pu-g9r" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PcU-EN-7Cp"/>
+                            <constraint firstItem="sgl-pu-g9r" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="RcQ-De-cLw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sgl-pu-g9r" secondAttribute="bottom" id="VBO-0v-ueh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sgl-pu-g9r" secondAttribute="trailing" constant="20" id="ulj-Ol-1Iq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageScroll" destination="sgl-pu-g9r" id="2Lw-1Q-TfZ"/>
+                        <outlet property="imagesView" destination="rVI-6U-7oz" id="Omv-wz-mrU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="App Background">
+            <color red="0.95546799476700595" green="0.94999042920078702" blue="0.92256345890727576" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

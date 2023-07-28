@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="geographi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOu-tD-Lmm" userLabel="Safe Area Cover">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
+                                <color key="backgroundColor" name="Hot Pink"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96t-7H-ieh" userLabel="Learn">
+                                <rect key="frame" x="0.0" y="59" width="393" height="695"/>
+                                <connections>
+                                    <segue destination="J4s-J1-o7W" kind="embed" identifier="learn" id="AKI-ks-qF2"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjT-ti-7lT">
+                                <rect key="frame" x="0.0" y="754" width="393" height="64"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NnO-M2-EJZ">
+                                        <rect key="frame" x="18" y="0.0" width="357" height="64"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANG-OA-BT2" customClass="TabBarButton" customModule="geographi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1a-ZW-ra6" customClass="TabBarButton" customModule="geographi" customModuleProvider="target">
+                                                <rect key="frame" x="119" y="0.0" width="119" height="64"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRN-WP-Ogc" customClass="TabBarButton" customModule="geographi" customModuleProvider="target">
+                                                <rect key="frame" x="238" y="0.0" width="119" height="64"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="App Background"/>
+                                <constraints>
+                                    <constraint firstItem="NnO-M2-EJZ" firstAttribute="leading" secondItem="QjT-ti-7lT" secondAttribute="leading" constant="18" id="GTf-6p-hMf"/>
+                                    <constraint firstAttribute="bottom" secondItem="NnO-M2-EJZ" secondAttribute="bottom" id="Twk-c0-AeD"/>
+                                    <constraint firstAttribute="trailing" secondItem="NnO-M2-EJZ" secondAttribute="trailing" constant="18" id="ZFO-eI-2Sm"/>
+                                    <constraint firstItem="NnO-M2-EJZ" firstAttribute="top" secondItem="QjT-ti-7lT" secondAttribute="top" id="wI0-LQ-tGI"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyU-Ci-vbK" userLabel="Play">
+                                <rect key="frame" x="0.0" y="59" width="393" height="695"/>
+                                <connections>
+                                    <segue destination="etp-Dz-WIN" kind="embed" identifier="play" id="i2M-RR-jt4"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1D-iZ-xE2" userLabel="Map">
+                                <rect key="frame" x="0.0" y="59" width="393" height="695"/>
+                                <connections>
+                                    <segue destination="nVM-Ea-CAU" kind="embed" identifier="map" id="xEh-m4-MEB"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJu-Y7-cfY">
+                                <rect key="frame" x="0.0" y="752" width="393" height="2"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="PHA-yA-bwC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="App Background"/>
+                        <constraints>
+                            <constraint firstItem="96t-7H-ieh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1iv-xc-zfv"/>
+                            <constraint firstItem="u1D-iZ-xE2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ek-Et-mgS"/>
+                            <constraint firstItem="CyU-Ci-vbK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3hE-xl-ahO"/>
+                            <constraint firstItem="QjT-ti-7lT" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.075" id="7GT-wP-3av"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rJu-Y7-cfY" secondAttribute="trailing" id="7oi-aR-wMj"/>
+                            <constraint firstItem="QjT-ti-7lT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BYB-kE-0IV"/>
+                            <constraint firstItem="lOu-tD-Lmm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bhg-l6-VdF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QjT-ti-7lT" secondAttribute="bottom" id="EOj-SY-hGz"/>
+                            <constraint firstItem="96t-7H-ieh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ig9-eb-zvw"/>
+                            <constraint firstItem="u1D-iZ-xE2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TfF-kB-9Wi"/>
+                            <constraint firstItem="lOu-tD-Lmm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UC5-XU-2je"/>
+                            <constraint firstItem="QjT-ti-7lT" firstAttribute="top" secondItem="CyU-Ci-vbK" secondAttribute="bottom" id="Veq-wG-c7i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QjT-ti-7lT" secondAttribute="trailing" id="Vyz-8Q-Lsk"/>
+                            <constraint firstItem="CyU-Ci-vbK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XUh-Mm-fSo"/>
+                            <constraint firstAttribute="trailing" secondItem="lOu-tD-Lmm" secondAttribute="trailing" id="fJj-ws-Dgy"/>
+                            <constraint firstItem="QjT-ti-7lT" firstAttribute="top" secondItem="96t-7H-ieh" secondAttribute="bottom" id="g9Q-Ig-TOU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="96t-7H-ieh" secondAttribute="trailing" id="kgU-V1-S2U"/>
+                            <constraint firstItem="96t-7H-ieh" firstAttribute="top" secondItem="lOu-tD-Lmm" secondAttribute="bottom" constant="-10" id="li7-XK-168"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u1D-iZ-xE2" secondAttribute="trailing" id="pgi-pw-eXA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CyU-Ci-vbK" secondAttribute="trailing" id="q6A-WA-sYu"/>
+                            <constraint firstItem="QjT-ti-7lT" firstAttribute="top" secondItem="rJu-Y7-cfY" secondAttribute="bottom" id="rSd-Ir-hGQ"/>
+                            <constraint firstItem="rJu-Y7-cfY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y2u-PN-maU"/>
+                            <constraint firstItem="QjT-ti-7lT" firstAttribute="top" secondItem="u1D-iZ-xE2" secondAttribute="bottom" id="yjE-8M-Fjo"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eHQ-Bn-Drv"/>
+                    <connections>
+                        <outlet property="learnTab" destination="ANG-OA-BT2" id="tEo-Cy-1vX"/>
+                        <outlet property="learnView" destination="96t-7H-ieh" id="TLh-LY-Ion"/>
+                        <outlet property="mapTab" destination="SRN-WP-Ogc" id="RSM-Yj-wC9"/>
+                        <outlet property="mapView" destination="u1D-iZ-xE2" id="OPD-ZR-MC6"/>
+                        <outlet property="playTab" destination="P1a-ZW-ra6" id="BlD-rf-2tJ"/>
+                        <outlet property="playView" destination="CyU-Ci-vbK" id="n4T-Nm-GNN"/>
+                        <outlet property="safeCoverView" destination="lOu-tD-Lmm" id="KSa-Yh-2eL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2758.0152671755723" y="-21.126760563380284"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="W8B-kh-cMk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" id="nVM-Ea-CAU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3f-oc-O0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3487" y="16"/>
+        </scene>
+        <!--Play-->
+        <scene sceneID="z4W-rl-ORq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Play" id="etp-Dz-WIN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOQ-z9-WY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3467" y="-63"/>
+        </scene>
+        <!--Learn-->
+        <scene sceneID="wxe-Xu-FQt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Learn" id="J4s-J1-o7W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDp-Qm-8m7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3493" y="-21"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="App Background">
+            <color red="0.99599999189376831" green="0.99599999189376831" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Hot Pink">
+            <color red="0.79400002956390381" green="0.40299999713897705" blue="0.48600000143051147" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

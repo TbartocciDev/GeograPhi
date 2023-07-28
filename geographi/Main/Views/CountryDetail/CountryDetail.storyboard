@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Country DetailVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CountryDetailVC" customModule="geographi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffO-40-MMG">
+                                <rect key="frame" x="28" y="215" width="337" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="textColor" name="Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sri Lanka" translatesAutoresizingMaskIntoConstraints="NO" id="nes-O0-8zz">
+                                <rect key="frame" x="28" y="99" width="337" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzD-J8-4v4">
+                                <rect key="frame" x="28" y="302.33333333333331" width="337" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKR-b6-D7U">
+                                <rect key="frame" x="28" y="340.66666666666669" width="337" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKB-EX-pUf">
+                                <rect key="frame" x="28" y="264" width="337" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="App Background Light"/>
+                        <constraints>
+                            <constraint firstItem="nes-O0-8zz" firstAttribute="height" relation="lessThanOrEqual" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.4" id="6jg-bm-PUa"/>
+                            <constraint firstItem="nes-O0-8zz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="BaR-bD-74R"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ffO-40-MMG" secondAttribute="trailing" constant="28" id="KmD-WQ-37w"/>
+                            <constraint firstItem="ffO-40-MMG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="OTj-39-1EO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nes-O0-8zz" secondAttribute="trailing" constant="28" id="U8Q-0k-5y8"/>
+                            <constraint firstItem="RKB-EX-pUf" firstAttribute="top" secondItem="ffO-40-MMG" secondAttribute="bottom" constant="8" id="VR7-ch-yiW"/>
+                            <constraint firstItem="TzD-J8-4v4" firstAttribute="width" secondItem="ffO-40-MMG" secondAttribute="width" id="Xaj-jR-gHH"/>
+                            <constraint firstItem="nes-O0-8zz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="eos-R7-rWV"/>
+                            <constraint firstItem="qKR-b6-D7U" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fCD-pT-yAC"/>
+                            <constraint firstItem="TzD-J8-4v4" firstAttribute="top" secondItem="RKB-EX-pUf" secondAttribute="bottom" constant="8" id="hXN-Xa-v4p"/>
+                            <constraint firstItem="ffO-40-MMG" firstAttribute="top" secondItem="nes-O0-8zz" secondAttribute="bottom" constant="16" id="rAf-In-1H7"/>
+                            <constraint firstItem="qKR-b6-D7U" firstAttribute="width" secondItem="ffO-40-MMG" secondAttribute="width" id="rDs-ja-MhC"/>
+                            <constraint firstItem="TzD-J8-4v4" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="sta-n7-wt8"/>
+                            <constraint firstItem="RKB-EX-pUf" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="u1Q-XX-p7J"/>
+                            <constraint firstItem="RKB-EX-pUf" firstAttribute="width" secondItem="ffO-40-MMG" secondAttribute="width" id="wbT-5q-Jdv"/>
+                            <constraint firstItem="qKR-b6-D7U" firstAttribute="top" secondItem="TzD-J8-4v4" secondAttribute="bottom" constant="8" id="y9R-Cl-fQ6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="capitalLbl" destination="TzD-J8-4v4" id="Wag-By-jen"/>
+                        <outlet property="flagImg" destination="nes-O0-8zz" id="Ftt-RJ-xop"/>
+                        <outlet property="nameLbl" destination="ffO-40-MMG" id="bHP-0N-YUC"/>
+                        <outlet property="populationLbl" destination="qKR-b6-D7U" id="Yyg-IC-JjV"/>
+                        <outlet property="regionLbl" destination="RKB-EX-pUf" id="N0S-Cn-GrA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="4"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" name="Text"/>
+    <resources>
+        <image name="Sri Lanka" width="200" height="100"/>
+        <namedColor name="App Background Light">
+            <color red="0.88999998569488525" green="0.88999998569488525" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.090000003576278687" green="0.1289999932050705" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

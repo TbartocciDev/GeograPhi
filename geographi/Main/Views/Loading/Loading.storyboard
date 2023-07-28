@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q05-Zp-Jtk">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoadingVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="LoadingVC" customModule="geographi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wM-l7-4Ur">
+                                <rect key="frame" x="0.0" y="242" width="393" height="437"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cultivating your environment..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1g-MK-H6o" customClass="LoadingLabel" customModule="geographi" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="416" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-H4-ure" customClass="CustomProgressBar" customModule="geographi" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="361" width="353" height="35"/>
+                                        <color key="backgroundColor" name="Autumn Orange"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="q0g-qh-odA"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TransparentLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kiA-EL-Scy">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="341"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jPV-H4-ure" firstAttribute="top" secondItem="kiA-EL-Scy" secondAttribute="bottom" constant="20" id="0f3-8A-TlW"/>
+                                    <constraint firstAttribute="trailing" secondItem="jPV-H4-ure" secondAttribute="trailing" constant="20" id="7Z0-ex-lol"/>
+                                    <constraint firstItem="kiA-EL-Scy" firstAttribute="top" secondItem="7wM-l7-4Ur" secondAttribute="top" id="FZ2-NS-a0T"/>
+                                    <constraint firstAttribute="trailing" secondItem="kiA-EL-Scy" secondAttribute="trailing" id="MsU-Qu-wa5"/>
+                                    <constraint firstItem="jPV-H4-ure" firstAttribute="leading" secondItem="7wM-l7-4Ur" secondAttribute="leading" constant="20" id="PHp-Sv-Sxf"/>
+                                    <constraint firstItem="U1g-MK-H6o" firstAttribute="top" secondItem="jPV-H4-ure" secondAttribute="bottom" constant="20" id="c05-sr-kbV"/>
+                                    <constraint firstAttribute="trailing" secondItem="U1g-MK-H6o" secondAttribute="trailing" constant="20" id="pGa-wB-fFX"/>
+                                    <constraint firstAttribute="bottom" secondItem="U1g-MK-H6o" secondAttribute="bottom" id="qT9-iA-grp"/>
+                                    <constraint firstItem="kiA-EL-Scy" firstAttribute="leading" secondItem="7wM-l7-4Ur" secondAttribute="leading" id="rXg-XN-Eq3"/>
+                                    <constraint firstItem="U1g-MK-H6o" firstAttribute="leading" secondItem="7wM-l7-4Ur" secondAttribute="leading" constant="20" id="xSK-3c-oJs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="App Background"/>
+                        <constraints>
+                            <constraint firstItem="7wM-l7-4Ur" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="3s3-rp-UuE"/>
+                            <constraint firstItem="kiA-EL-Scy" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.4" id="LvC-RZ-abp"/>
+                            <constraint firstItem="7wM-l7-4Ur" firstAttribute="height" relation="lessThanOrEqual" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.7" id="Tzt-PP-Yjj"/>
+                            <constraint firstItem="7wM-l7-4Ur" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="ZBh-0S-WaV"/>
+                            <constraint firstItem="7wM-l7-4Ur" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="yf5-gy-0ao"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Qi-vg-ESj"/>
+                    <connections>
+                        <outlet property="loadingStrLbl" destination="U1g-MK-H6o" id="uPY-Hv-TwV"/>
+                        <outlet property="progressBar" destination="jPV-H4-ure" id="h7N-mC-Wui"/>
+                        <segue destination="QRa-Tq-eS2" kind="show" identifier="finishLoading" id="Vkm-MY-4vK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962.59541984732823" y="3.5211267605633805"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="rRY-dU-xUz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="QRa-Tq-eS2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Y1o-dq-MW0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPz-Ic-ySr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FFT-Yf-wHy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q05-Zp-Jtk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hQF-uS-VKc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Hvo-9h-dCT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPD-4O-0sk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.2900763358778624" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TransparentLogo" width="1024" height="1024"/>
+        <namedColor name="App Background">
+            <color red="0.99599999189376831" green="0.99599999189376831" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Autumn Orange">
+            <color red="0.95300000905990601" green="0.42300000786781311" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.090000003576278687" green="0.1289999932050705" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
